@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Api.Sys
+{
+    public interface IPageResult<TEntity>
+    {
+
+        IEnumerable<TEntity> Page { get; }
+
+        int PageIndex { get; }
+        int PageSize { get; }
+        int TotalPages { get; }
+        int TotalRecs     { get; }
+    }
+}

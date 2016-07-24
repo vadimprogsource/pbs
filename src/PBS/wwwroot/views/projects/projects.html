@@ -1,0 +1,63 @@
+﻿<h1 class="page-header">PROJECT CONTROL PANEL</h1>
+
+<h2 class="sub-header">Projects</h2>
+
+
+
+
+
+
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Project Code</th>
+                <th>Title</th>
+                <th>Description</th>
+
+                <th><button class="btn btn-default" type="button" onclick="return jAction.project.new();" style="float:right">Create New Project</button></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {{#each page}}
+
+            <tr data-project-id="{{id}}">
+                <td onclick="return jAction.project.click();">
+                    <a href="#" onclick="return jAction.project.edit('{{id}}')">{{code}}</a>
+                </td>
+                <td onclick="return jAction.project.click(this);">
+                    {{title}}
+                </td>
+               
+                <td onclick="return jAction.project.click(this);">
+                    {{description}}
+                </td>
+
+                <td>
+
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
+                            Project actions
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="return jAction.project.edit('{{id}}')">Edit</a></li>
+                            <li><a href="#" onclick="return jAction.admin.delete('{{id}}')">Delete</a></li>
+                        </ul>
+                    </div>
+
+
+
+                </td>
+            </tr>
+
+            {{/each}}
+
+
+        </tbody>
+    </table>
+
+
+</div>

@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7A6B2792-45FE-4A70-8B94-216186BAC783}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9F79CDDC-6233-4DD3-943A-E977AAA921E4}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PBS", "src\PBS\PBS.xproj", "{634774AB-5717-4F23-A10D-7BC0085AA313}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Api", "src\Api\Api.xproj", "{76C40660-E047-406C-8D2A-B268C2CCC492}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Entity", "src\Entity\Entity.xproj", "{9881A6B1-6AC9-424E-B9FA-E888F4A61124}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Core", "src\Core\Core.xproj", "{B122B8E2-E101-4ED6-B1E0-D30F16682ACD}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Repository", "src\Repository\Repository.xproj", "{71B87D2B-09AD-4627-ADF9-081F8138A291}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sys", "src\Sys\Sys.xproj", "{F28A690D-221A-4462-B30E-BEFE4DB136E1}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Web", "src\Web\Web.xproj", "{69F8933F-BC3A-4631-93AE-5440D0C3AC57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{634774AB-5717-4F23-A10D-7BC0085AA313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634774AB-5717-4F23-A10D-7BC0085AA313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634774AB-5717-4F23-A10D-7BC0085AA313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634774AB-5717-4F23-A10D-7BC0085AA313}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C40660-E047-406C-8D2A-B268C2CCC492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C40660-E047-406C-8D2A-B268C2CCC492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C40660-E047-406C-8D2A-B268C2CCC492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C40660-E047-406C-8D2A-B268C2CCC492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9881A6B1-6AC9-424E-B9FA-E888F4A61124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9881A6B1-6AC9-424E-B9FA-E888F4A61124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9881A6B1-6AC9-424E-B9FA-E888F4A61124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9881A6B1-6AC9-424E-B9FA-E888F4A61124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B122B8E2-E101-4ED6-B1E0-D30F16682ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B122B8E2-E101-4ED6-B1E0-D30F16682ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B122B8E2-E101-4ED6-B1E0-D30F16682ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B122B8E2-E101-4ED6-B1E0-D30F16682ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71B87D2B-09AD-4627-ADF9-081F8138A291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B87D2B-09AD-4627-ADF9-081F8138A291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B87D2B-09AD-4627-ADF9-081F8138A291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B87D2B-09AD-4627-ADF9-081F8138A291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28A690D-221A-4462-B30E-BEFE4DB136E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28A690D-221A-4462-B30E-BEFE4DB136E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28A690D-221A-4462-B30E-BEFE4DB136E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28A690D-221A-4462-B30E-BEFE4DB136E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69F8933F-BC3A-4631-93AE-5440D0C3AC57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69F8933F-BC3A-4631-93AE-5440D0C3AC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69F8933F-BC3A-4631-93AE-5440D0C3AC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69F8933F-BC3A-4631-93AE-5440D0C3AC57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{634774AB-5717-4F23-A10D-7BC0085AA313} = {7A6B2792-45FE-4A70-8B94-216186BAC783}
+		{76C40660-E047-406C-8D2A-B268C2CCC492} = {7A6B2792-45FE-4A70-8B94-216186BAC783}
+		{9881A6B1-6AC9-424E-B9FA-E888F4A61124} = {7A6B2792-45FE-4A70-8B94-216186BAC783}
+		{B122B8E2-E101-4ED6-B1E0-D30F16682ACD} = {7A6B2792-45FE-4A70-8B94-216186BAC783}
+		{71B87D2B-09AD-4627-ADF9-081F8138A291} = {7A6B2792-45FE-4A70-8B94-216186BAC783}
+		{F28A690D-221A-4462-B30E-BEFE4DB136E1} = {7A6B2792-45FE-4A70-8B94-216186BAC783}
+		{69F8933F-BC3A-4631-93AE-5440D0C3AC57} = {7A6B2792-45FE-4A70-8B94-216186BAC783}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dementey.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = src\\Api\\Api.xproj
+		SccProjectTopLevelParentUniqueName1 = PBS.sln
+		SccProjectName1 = src/Api
+		SccLocalPath1 = src\\Api
+		SccProjectUniqueName2 = src\\Entity\\Entity.xproj
+		SccProjectTopLevelParentUniqueName2 = PBS.sln
+		SccProjectName2 = src/Entity
+		SccLocalPath2 = src\\Entity
+		SccProjectUniqueName3 = src\\PBS\\PBS.xproj
+		SccProjectTopLevelParentUniqueName3 = PBS.sln
+		SccProjectName3 = src/PBS
+		SccLocalPath3 = src\\PBS
+		SccProjectUniqueName4 = src\\Core\\Core.xproj
+		SccProjectTopLevelParentUniqueName4 = PBS.sln
+		SccProjectName4 = src/Core
+		SccLocalPath4 = src\\Core
+		SccProjectUniqueName5 = src\\Repository\\Repository.xproj
+		SccProjectTopLevelParentUniqueName5 = PBS.sln
+		SccProjectName5 = src/Repository
+		SccLocalPath5 = src\\Repository
+		SccProjectUniqueName6 = src\\Sys\\Sys.xproj
+		SccProjectTopLevelParentUniqueName6 = PBS.sln
+		SccProjectName6 = src/Sys
+		SccLocalPath6 = src\\Sys
+		SccProjectUniqueName7 = src\\Web\\Web.xproj
+		SccProjectTopLevelParentUniqueName7 = PBS.sln
+		SccProjectName7 = src/Web
+		SccLocalPath7 = src\\Web
+	EndGlobalSection
+EndGlobal

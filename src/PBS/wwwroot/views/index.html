@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <title>PBS Project</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/bootstap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/dashboard.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link href="/bootstap/datepicker/css/bootstrap-datepicker.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/bootstap/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="js/sys/uri.js"></script>
+    <script src="/js/sys/httpclient.js"></script>
+    <script src="/js/sys/httploader.js"></script>
+    <script src="/js/sys/jaction.js"></script>
+    <script src="/js/sys/moment.js"></script>
+    <script src="/js/sys/handlebars-v4.0.5.js"></script>
+    <script src="js/sys/momentHelper.js"></script>
+    <script src="js/sys/paginationHelper.js"></script>
+    <script src="/js/sys/dataBinder.js"></script>
+    <script src="/js/sys/popupWindowModal.js"></script>
+
+
+    <script src="/js/config.js"></script>
+    <script src="/js/app/auth/auth.js"></script>
+   
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div class="container">
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Login :</h2>
+            <label for="form-signin-email" class="sr-only">User name</label>
+            <input type="email" id="form-signin-email" class="form-control" placeholder="User name" required autofocus value="Admin">
+            <label for="form-signin-password" class="sr-only">Password</label>
+            <input type="password" id="form-signin-password" class="form-control" placeholder="Password" value="1" required>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="button" onclick="return jAction.auth.signIn($('#form-signin-email').val(), $('#form-signin-password').val());">Sign in</button>
+        </form>
+    </div> <!-- /container -->
+
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="display:none">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/" onclick="return jAction.backToHistory();"><span class="glyphicon glyphicon-circle-arrow-left" />&nbsp;PBS&nbsp;</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/" onclick="return jAction.admin.all();">Users</a></li>
+                    <li><a href="#" onclick="return jAction.projects.all()">Projects</a></li>
+                    <li><a href="#" onclick="return jAction.auth.signOut();">Exit</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="display:none">
+
+        <div id="container" class="main">
+            <h1 class="page-header">Admin Control Panel</h1>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/bootstap/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="/bootstap/assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/bootstap/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    <script src="/bootstap/datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="/bootstap/datepicker/locales/bootstrap-datepicker.ru.min.js"></script>
+    <script src="/bootstap/datepicker/js/initDatepicker.js"></script>
+
+    <script src="/js/app/admin/actions.js"></script>
+    <script src="/js/app/projects/actions.js"></script>
+
+ 
+    <script>
+
+   
+
+        jAction.auth
+        .onLogin(function ()
+        {
+            jAction.admin.all();
+
+            $(".navbar").css("display", "");
+            $(".container-fluid").css("display", "");
+            $(".container").css("display", "none");
+        })
+        .onLoginFailed(function ()
+        {
+            alert("Login failed !");
+        })
+        .onLogOut(function ()
+        {
+            $(".navbar").css("display", "none");
+            $(".container-fluid").css("display", "none");
+            $(".container").css("display", "");
+        });
+    </script>
+
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="window-popup-modal">
+            <div class="modal-dialog">
+                <div class="modal-content" id="window-popup-content">
+                   
+                </div><!-- /.modal-content -->
+  
+    </div><!-- /.modal-dialog-->
+    </div>
+
+
+
+
+
+</body>
+
+
+</html>
+

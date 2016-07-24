@@ -1,0 +1,73 @@
+﻿<h1 class="page-header">USER CONTROL PANEL</h1>
+
+<h2 class="sub-header">Users</h2>
+
+
+
+
+
+
+
+<div class="table-responsive">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Login Name</th>
+                <th>User Title</th>
+                <th>Modified</th>
+                <th>Role</th>
+                <th><button class="btn btn-default" type="button" onclick="return jAction.admin.new();" style="float:right">Create New User</button></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {{#each users}}
+
+            <tr data-user-login="{{loginName}}">
+                <td onclick="return jAction.admin.click();">
+                    <a href="#" onclick="return jAction.admin.edit('{{loginName}}')">{{loginName}}</a><br />
+                    <label>skype:</label><span>{{skype}}</span>
+                </td>
+                <td onclick="return jAction.admin.click(this);">
+                    {{title}}<br />
+                    <label>phone:</label><span>{{phone}}</span>
+                </td>
+                <td onclick="return jAction.admin.click(this);">{{dateTime modifiedOn format="DD.MM.YYYY hh:mm A"}}</td>
+                <td onclick="return jAction.admin.click(this);">
+                    {{#if isAdmin}}
+                    <span style="color:red">Admin</span>
+                    {{else}}
+                    <span style="color:green">User</span>
+                    {{/if}}
+                    <br />
+                    <label>email:</label><span>{{email}}</span>
+
+                </td>
+
+                <td>
+
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
+                            User actions
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="return jAction.admin.edit('{{loginName}}')">Edit</a></li>
+                            <li><a href="#" onclick="return jAction.password.setPassword('{{loginName}}')">Set Password</a></li>
+                            <li><a href="#" onclick="return jAction.admin.delete('{{loginName}}')">Delete</a></li>
+                        </ul>
+                    </div>
+
+
+
+</td>
+            </tr>
+
+{{/each}}
+
+
+        </tbody>
+    </table>
+
+
+</div>

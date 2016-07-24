@@ -1,0 +1,425 @@
+/********************************************************************************
+ * operation list
+ ********************************************************************************/
+
+.projectOperation{
+  width: 150px;
+  float: left;
+}
+
+.projectOperation .panel-body{
+  padding: 0 10px;
+}
+
+.projectOperation ul{
+  padding: 0;
+  margin: 0;
+  min-height: 94px;
+}
+
+.projectOperation .btn{
+  text-align: left;
+  margin: 10px 0;
+}
+
+.projectOperation .btn-success{
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+.projectOperation .operation-bottom-button:first-child {
+  display: none;
+}
+
+/********************************************************************************
+ * schedule styles
+ ********************************************************************************/
+
+.projectListNode{
+  margin: 0 0 20px 160px;
+}
+
+.projectListWrapper{
+  overflow: auto;
+}
+
+.projectListInfo{
+  padding-top: 30px;
+  text-transform: uppercase;
+}
+
+.projectListInfo .btn-block{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.projectList {
+  position: relative;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  min-width: 1000px;
+  padding-left: 120px;
+}
+
+.projectListHeadline{
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  border-bottom: solid 1px #ddd;
+  white-space: nowrap;
+  height: 70px;
+}
+
+.projectListHeadlineName,
+.projectListLineName {
+  width: 120px;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 10px 0 10px 5px;
+  border-right: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+}
+
+.projectListHeadlineName{
+  font-size: 12px;
+  line-height: 14px;
+  width: 120px;
+  border-right: solid 1px #ddd;
+  height: 70px;
+  padding: 27px 0 27px 5px;
+}
+
+.projectListFixedColumn 
+{
+  position: absolute;
+  width: 120px;
+  left: 0;
+}
+
+.projectListCells {
+  width: 100%;
+  overflow: auto;
+}
+
+.projectListCellsContainer {
+}
+
+.projectListHeadlineTime > .date-line {
+  display: block;
+  width: 100%;
+  height: 35px;
+  border-bottom: solid 1px #ddd;
+  border-right: none;
+  padding: 0;
+  text-align: left;
+}
+
+.projectListHeadlineTime > div,
+.projectListHeadlineTime > .date-line > .date-value {
+  font-size: 12px;
+  line-height: 14px;
+  padding: 10px 0;
+  width: 4.16%;
+  display: inline-block;
+  border-right: solid 1px #ddd;
+  text-align: center;
+}
+
+.projectListHeadlineTime > .date-line > .date-value:last-child,
+.projectListHeadlineTime > div:last-child{
+  border-width: 0;
+}
+
+.single-line-header .projectListHeadline {
+  height: 35px;
+}
+
+.single-line-header .projectListHeadlineName {
+  height: 35px;
+  padding: 10px 0 10px 5px;
+}
+
+.projectListLine{
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  border-bottom: solid 1px #ddd;
+  height: 35px;
+}
+.projectListLine:last-child{
+  border-bottom: 0;
+}
+
+.projectListLineName:nth-child(even),
+.projectListLine:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.projectListLineName:last-child {
+  border-bottom: none;
+}
+
+.projectListLineTime{
+  left: 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.projectListLineTime > div{
+  padding: 10px 0;
+  width: 4.16%;
+  display: inline-block;
+  height: 100%;
+  content: '';
+}
+div.projectListLineTimeBar{
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+}
+.projectListLineTimeControl{
+  display: block;
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  /*min-width: 4.16%;*/
+  overflow: hidden;
+  border: solid 1px #337ab7;
+  /*content: '';*/
+  border-radius: 5px;
+  background: #86bff0;
+  cursor: pointer;
+
+  font-size: 12px;
+  line-height: 22px;
+  padding: 0 3px;
+  color: #fff;
+}
+
+.projectListLineTimeControl.fixed
+{
+    background:gray
+}
+
+.projectListNode_yellow .projectListLineTimeControl{
+  border: solid 1px #ffdd41;
+  background: #fbf5d8;
+}
+.projectListNode_red .projectListLineTimeControl{
+  border: solid 1px #ff7b78;
+  background: #ffdddc;
+}
+.projectListNode_green .projectListLineTimeControl{
+  border: solid 1px #5cb85c;
+  background: #c0f5c0;
+}
+
+.scheduler-buttons {
+    display: none;
+}
+
+.scheduler-buttons.show {
+    display: block;
+}
+
+.scheduler-time-range-tip {
+    position: absolute;
+    border-left: 1px solid #404040;
+    border-right: 1px solid #404040;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.scheduler-time-range-tip .start-time {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    text-align: right;
+    font-size: 12px;
+    padding-right: 3px;
+}
+
+.scheduler-time-range-tip .end-time {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    text-align: left;
+    font-size: 12px;
+    padding-left: 3px;
+}
+
+/********************************************************************************
+ * other :)
+ ********************************************************************************/
+
+.b-create-task-form{
+  margin: 0 auto;
+}
+
+.form-items{
+  position: relative;
+}
+
+.form-items .tab-pane{
+  border: solid 1px #ddd;
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  padding: 20px 0 0;
+}
+
+.form-items-group{
+  position: relative;
+  border: solid 1px #ddd;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 0 5px 20px;
+}
+.form-items-group-title{
+  position: absolute;
+  line-height: 16px;
+  font-size: 12px;
+  padding: 0 15px 0 10px;
+  background: #fff;
+  left: 10px;
+  top: -8px;
+}
+.form-items .form-group-small .form-control{
+  width: 45px;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-items label{
+  font-weight: 400;
+  margin-left: 5px;
+}
+.form-items-group .col-xs-6{
+  padding: 0;
+}
+
+.form-inline .checkbox,
+.form-inline .radio,
+.form-inline .form-group,
+.form-inline .form-control{
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.form-inline .radio{
+  margin-right: 10px;
+}
+
+.form-items-cols{
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  margin: -5px 0;
+}
+.form-items-cols-item{
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  font-size: 14px;
+  line-height: normal;
+  margin: 5px 0;
+}
+.form-items-cols-item_large{
+  width: 100%;
+}
+
+.form-custom-col{
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+.input-group.date{
+  max-width: 150px;
+}
+.form-custom-col .col-xs-12,
+.form-custom-col .col-xs-8,
+.form-custom-col .col-xs-4{
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 26px;
+}
+.checkbox-inline-list{
+  margin: 10px 0 0;
+}
+.checkbox-inline-list .checkbox-inline{
+  margin: 0 10px 0 0;
+  width: 22%;
+}
+.checkbox-inline{
+  line-height: 20px;
+}
+.form-custom-col .col-xs-4{
+  vertical-align: bottom;
+}
+.form-submit-btn{
+  margin: 0 5px 20px -15px;
+}
+.bySelectedDateNode{
+  text-align:center;
+  font-size: 0;
+  line-height: 0;
+  display: inline-block;
+}
+.bySelectedDateBtn{
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0 5px 0 15px;
+  width: 100px;
+}
+.bySelectedDateBtn .form-submit-btn{
+  margin: 0 0 20px;
+}
+.bySelectedDateWrapper{
+  margin: -10px;
+  font-size: 0;
+  line-height: 0;
+}
+#bySelectedDateValue{
+  font-size: 10px;
+  width: 100%;
+  line-height: 12px;
+
+}
+.bySelectedDateDatepicker{
+  display: inline-block;
+  vertical-align: top;
+  border:solid 1px #ddd;
+  margin: 10px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.bySelectedDateDatepicker .datepicker-inline{
+  width: 190px;
+}
+.bySelectedDateDatepicker .datepicker table tr td{
+  padding: 2px;
+}
+
+#bySelected .move-prev {
+  float: left;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+#bySelected .move-next {
+  float: right;
+  margin-top: 10px;
+  margin-right: 5px;
+}
